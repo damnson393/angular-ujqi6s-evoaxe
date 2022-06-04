@@ -1,17 +1,22 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, VERSION } from '@angular/core';
 import { Product } from '../products';
 
 @Component({
   selector: 'app-products-alerts',
-  templateUrl: './products-alerts.component.html',
-  styleUrls: ['./products-alerts.component.css']
+  template: `<p ngIf="product && product.price > 700"><button type="button">Notify Me</button></p>`,
+  styleUrls: ['./products-alerts.component.css'],
 })
 export class ProductsAlertsComponent implements OnInit {
-
+  
   @Input() product!: Product;
-  constructor() { }
+  constructor() {}
 
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }
+export interface Nam{
+  nm:string;
+}
+export const n:Nam = 
+  {
+    nm:VERSION.major
+  }

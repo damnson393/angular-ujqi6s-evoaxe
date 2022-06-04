@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-
 import { products } from '../products';
+import { n} from '../products-alerts/products-alerts.component';
 
 @Component({
   selector: 'app-product-list',
@@ -11,7 +11,7 @@ export class ProductListComponent {
   products = products;
 
   share() {
-    window.alert('The product has been shared!');
+    window.alert('The product has been shared!'+ n.nm);
   }
 }
 
